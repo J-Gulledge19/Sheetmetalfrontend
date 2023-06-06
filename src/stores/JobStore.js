@@ -1,5 +1,5 @@
 import { makeObservable, observable, action } from "mobx";
-const url = "https://sheetmetalbackend.onrender.com"
+const url = "https://sheetmetalbackend-5kzb.onrender.com"
 
 export default class JobStore{
     

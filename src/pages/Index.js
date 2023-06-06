@@ -1,5 +1,6 @@
 import {observer} from 'mobx-react'
 import { store } from '../router';
+import { Link } from 'react-router-dom';
 
 
 const Index = () => {
@@ -18,13 +19,17 @@ const Index = () => {
         
             {store.jobStore._jobs.map(job => (
             <tr>
-                <td>{job.name}</td>
+                {console.log(job)}
+                <td></td>
+                <td><Link className="link" to={`show/${job.id}`}>
+                <p>{job.name}</p>
+                </Link></td>
+                <td>{job.downloads[0].dlName}</td>
                 <td>{job.number}</td>
                 <td></td>
-                <td></td>
-                <td></td>
             </tr>
-            ))}   
+            ))
+            }   
         </table> 
         </div>
     )
