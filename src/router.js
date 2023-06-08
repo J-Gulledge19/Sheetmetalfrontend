@@ -5,7 +5,7 @@ import Index from "./pages/Index"
 import NewJob from "./pages/NewJob"
 // import Update from "./pages/Update"
 // import UpdateJob from "./pages/UpdateJob"
-// import CreateDl from "./pages/CreateDl"
+import CreateDl from "./pages/CreateDl"
 import { RootStore } from "./stores/RootStore"
 
 
@@ -17,8 +17,8 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path="" element={<Index/>}/>
           <Route path="show/:id" element={<Show/>} />
           <Route path="create" element={<NewJob/>} />
-          {/* <Route path="newdl/:id" element={<CreateDl/>} />
-          <Route path="edit/:id/:dlId" element={<Update/>} />
+          <Route path="newdl/:id" element={<CreateDl/>} />
+          {/* <Route path="edit/:id/:dlId" element={<Update/>} />
           <Route path="editjob/:id" element={<UpdateJob/>}/> */}
       </Route>
   </>
