@@ -24,7 +24,7 @@ const Index = () => {
                 <td><Link className="link" to={`show/${job.id}`}>
                 <p>{job.name}</p>
                 </Link></td>
-                <td>{job.downloads[0].dlName}</td>
+                {/* <td>{job.downloads[0].dlName}</td> */}
                 <td>{job.number}</td>
                 <td></td>
             </tr>

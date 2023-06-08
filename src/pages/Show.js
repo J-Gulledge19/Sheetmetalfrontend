@@ -9,12 +9,12 @@ const Show = () => {
     console.log(selectedJob)
     return (
         <div>
-            {/* <h1 class="secondh1"> {job.name} </h1>
+            <h1 class="secondh1"> {selectedJob.name} </h1>
         <div class="button">
-            <Link className='link' to={`/job/${job.id}/newdownload`}>New Download</Link>
+            <Link className='link' to={`/newdl/${selectedJob.id}`}>New Download</Link>
         </div>
         
-        <table> 
+        {/* <table> 
                 
                 <h2>{dl.dlName}</h2>
                 <div class="button">
