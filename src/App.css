@@ -47,6 +47,11 @@ h2{
 
 }
 
+.tabletwo{
+  margin-top: auto;
+  position: relative;
+}
+
 /*main styling */
 .showcard{
   width: 80vw;
@@ -57,6 +62,11 @@ h2{
   margin-top: 6rem;
 }
 
+main{
+  position: relative;
+  overflow-y: scroll;
+  overflow: hidden;
+}
 /* Form Styling */
 .form-page{
     border-radius: 20px;
@@ -79,4 +89,10 @@ textarea{
 
 .button:hover{
   color: rgb(44, 83, 183)
+}
+
+.secondh1{
+  color:black;
+  position: relative;
+  margin-bottom: 60px;
 }
