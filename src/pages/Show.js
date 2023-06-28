@@ -14,7 +14,7 @@ const Show = () => {
                     <Link className='link' to={`/newdl/${selectedJob.id}`}>New Download</Link>
                 </div>
                 {selectedJob.downloads.map(dl => (
-                <><table>
+                    <>
                         <h2>{dl.dlName}</h2>
                         <div class="button">
                             <Link className='link' to={`/job/dl/${selectedJob.id}/${dl._id}/edit`}>Edit</Link>
@@ -22,6 +22,7 @@ const Show = () => {
                                 <input type="submit" value="Delete" />
                             </form>
                         </div>
+                    <table>
 
                         <tr>
                             <th>Active</th>
@@ -35,8 +36,9 @@ const Show = () => {
                             <td> {dl.dateTurnedIn} </td>
                             <td> {dl.dateDue}</td>
                         </tr>
-                    </table><table class="tabletwo">
-                            <h3>{dl.dlName} Weights</h3>
+                    </table>
+                    <h2>{dl.dlName} Weights</h2>
+                    <table class="tabletwo">
                             <tr>
                                 <th>Galvinized</th>
                                 <th>Stainless</th>
