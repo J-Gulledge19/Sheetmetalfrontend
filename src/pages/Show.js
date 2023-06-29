@@ -37,7 +37,7 @@ const Show = () => {
                             <td> {dl.dateDue}</td>
                         </tr>
                     </table>
-                    <h2>{dl.dlName} Weights</h2>
+                    <h2>Weight</h2>
                     <table class="tabletwo">
                             <tr>
                                 <th>Galvinized</th>
