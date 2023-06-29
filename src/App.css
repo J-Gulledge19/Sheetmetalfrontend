@@ -80,11 +80,18 @@ textarea{
 }
 
 .button{
-  background-color: #060606;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000000;
   border-radius: 6px;
   text-decoration: none;
   color: rgb(8, 177, 255);
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+  max-width: 150px;
 }
 
 .button:hover{
