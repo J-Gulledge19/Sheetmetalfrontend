@@ -7,12 +7,11 @@ const Index = () => {
 
     return (
         <div>
-             <h2>Active Jobs</h2>
-        <table class="activetable">
+             <h2>All Jobs</h2>
+        <table>
             <tr>
-                <th>Active</th>
+                
                 <th>Job Name</th>
-                <th>Download</th>
                 <th>Job Number</th>
                 <th>Total Weight</th>
             </tr>
@@ -20,11 +19,9 @@ const Index = () => {
             {store.jobStore._jobs.map(job => (
             <tr>
                 {console.log(job)}
-                <td></td>
                 <td><Link className="link" to={`show/${job.id}`}>
                 <p>{job.name}</p>
                 </Link></td>
-                {/* <td>{job.downloads[0].dlName}</td> */}
                 <td>{job.number}</td>
                 <td></td>
             </tr>
