@@ -18,7 +18,6 @@ const Index = () => {
         
             {store.jobStore._jobs.map(job => (
             <tr>
-                {console.log(job)}
                 <td><Link className="link" to={`show/${job.id}`}>
                 <p>{job.name}</p>
                 </Link></td>
