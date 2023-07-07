@@ -16,15 +16,25 @@ function NewDl() {
             }}
             method="post">
             <h4>Download Name</h4>
-              <textarea typeof="input" name="dlName" placeholder='Name'/><br/>
-            <h4>Active</h4>
-              <input type="checkbox" name="active"/><br/>  
+              <textarea typeof="input" name="dlName" placeholder='Name'/><br/> 
             <h4>Date Turned In</h4>
               <textarea typeof="input" name="dateTurnedIn" placeholder='Date Turned In'/><br/>
             <h4>Date Due</h4>
               <textarea typeof="input" name="dateDue" placeholder='Date Due'/><br/>
-            <h4>Job Completed</h4>
-              <input type="checkbox" name="done"/><br/>
+              <h4>Received By</h4>
+              <textarea typeof="input" name="dateDue" placeholder='Date Due'/><br/>
+              <h4>Number of Fittings</h4>
+              <textarea typeof="input" name="fittings" placeholder='Date Due'/><br/>
+              <h4>Amount of Duct</h4>
+              <textarea typeof="input" name="duct" placeholder='Date Due'/><br/>
+              <h4>Total Download Weight</h4>
+              <textarea typeof="input" name="weight" placeholder='Date Due'/><br/>
+              <label>
+                Active<input className='checkbox' type="checkbox" name="active"/>
+                Cut Out<input className='checkbox' type="checkbox" name="cutOut"/>
+                Job Completed<input className='checkbox' type="checkbox" name="done"/>
+            </label><br/>
+
             <input type="submit" value={`Add Download to ${selectedJob.name} `} />
             </Form>
             </div>
