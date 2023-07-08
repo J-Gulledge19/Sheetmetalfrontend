@@ -47,6 +47,7 @@ const Show = () => {
                             <th>Number of Fittings</th>
                             <th>Amount of Duct</th>
                             <th>Weight</th>
+                            <th>Completed</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -62,6 +63,7 @@ const Show = () => {
                             <td>{dl.fittings}</td>
                             <td>{dl.duct}</td>
                             <td>{dl.weight}</td>
+                            <td>{dl.done ? "Yes" : "No"}</td>
                             <Link className="link" to={`/edit/${selectedJob.id}/${dl.id}`}>
                             <td><div className='show-edit'><AiFillEdit/></div></td>
                         </Link>
