@@ -12,7 +12,7 @@ function NewDl() {
           <h2>New Download</h2>
           <Form onSubmit={async (event) => { 
             await store.jobStore.createDl(event)
-            navigate('/')
+            navigate(`/show/${selectedJob.id}`)
             }}
             method="post">
             <h4>Download Name</h4>
