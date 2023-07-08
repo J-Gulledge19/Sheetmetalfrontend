@@ -8,7 +8,25 @@ import { store } from '../router'
 const Show = () => {
     const { id } = useParams()
     const selectedJob = store.jobStore._jobs.find(job => job.id === parseInt(id))
-    console.log(selectedJob.downloads)
+    function ActiveIcon() {
+        return (
+            <>
+                <div class="led-box">
+                    <div class="led-green"></div>
+                </div>
+            </>
+        );
+        }
+
+    function NotActiveIcon() {
+        return (
+            <>
+                <div class="led-box">
+                    <div class="led-red"></div>
+                </div>
+            </>
+        );
+        }
     return (
             <>
                     <h1 class="secondh1"> {selectedJob.name} </h1>
@@ -16,13 +34,6 @@ const Show = () => {
                     <Link className='link' to={`/newdl/${selectedJob.id}`}>New Download</Link>
                 </div>
                     <>
-                        {/*
-                        <div class="button">
-                        <Link className='link' to={`/job/dl/${selectedJob.id}/${dl._id}/edit`}>Edit</Link>
-                        <form class="delete" action={`/job/dl/${selectedJob.id}/${dl._id}?_method=DELETE`} method="POST">
-                        <input type="submit" value="Delete" />
-                        </form>
-                    </div> */}
                     <table>
 
                         <tr>
@@ -41,7 +52,7 @@ const Show = () => {
                         </tr>
                     {selectedJob.downloads.map(dl => (
                         <tr>
-                            <td>{dl.active ? "Active" : "Not Active"}</td>
+                            <td>{dl.active ? ActiveIcon() : NotActiveIcon()}</td>
                             <td> {dl.dlName} </td>
                             <td> {selectedJob.number} </td>
                             <td> {dl.receivedBy} </td>
@@ -52,10 +63,10 @@ const Show = () => {
                             <td>{dl.duct}</td>
                             <td>{dl.weight}</td>
                             <Link className="link" to={`/edit/${selectedJob.id}/${dl.id}`}>
-                            <td className='show-edit'><AiFillEdit/></td>
+                            <td><div className='show-edit'><AiFillEdit/></div></td>
                         </Link>
                             <td className='deletebutton' onClick={async () => {
-                                await store.jobStore.deletedlAction(dl.id)
+                                await store.jobStore.deleteDlAction(dl.id)
                             }}>
                                 <RiDeleteBin5Line className='deletebutton' />
                             </td> 
