@@ -13,6 +13,7 @@ export default class JobStore{
             _jobs: observable,
             fetchJobs: action,
             createJob: action,
+            createDl: action,
         })
     }
     
@@ -47,6 +48,33 @@ export default class JobStore{
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(newJob)
+        })
+        await this.init()
+    }
+
+    async createDl(e, jobId){
+        e.preventDefault()
+        const formData = new FormData(e.target)
+        const newDl = {
+            dlName: formData.get("dlName"),
+            done: formData.get("done"),
+            dateTurnedIn: formData.get("dateTurnedIn"),
+            dateDue: formData.get("dateDue"),
+            receivedBy: formData.get("receivedBy"),
+            fittings: formData.get("fittings"),
+            duct: formData.get("duct"),
+            weight: formData.get("weight"),
+            active: formData.get("active"),
+            cutOut: formData.get("cutOut"),
+            job: jobId,
+        }
+        console.log(`form submit${newDl}`)
+        await fetch(`${url}/download/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newDl)
         })
         await this.init()
     }
