@@ -11,7 +11,7 @@ function NewDl() {
        <div className="form-page">
           <h2>New Download</h2>
           <Form onSubmit={async (event) => { 
-            await store.jobStore.createDl(event)
+            await store.jobStore.createDl(event, selectedJob.id)
             navigate(`/show/${selectedJob.id}`)
             }}
             method="post">
