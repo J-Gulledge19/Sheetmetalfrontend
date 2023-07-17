@@ -22,13 +22,13 @@ function NewDl() {
             <h4>Date Due</h4>
               <textarea typeof="input" name="dateDue" placeholder='Date Due'/><br/>
               <h4>Received By</h4>
-              <textarea typeof="input" name="dateDue" placeholder='Date Due'/><br/>
+              <textarea typeof="input" name="receivedBy" placeholder='Received By'/><br/>
               <h4>Number of Fittings</h4>
-              <textarea typeof="input" name="fittings" placeholder='Date Due'/><br/>
+              <textarea typeof="input" name="fittings" placeholder='Fittings'/><br/>
               <h4>Amount of Duct</h4>
-              <textarea typeof="input" name="duct" placeholder='Date Due'/><br/>
+              <textarea typeof="input" name="duct" placeholder='Duct'/><br/>
               <h4>Total Download Weight</h4>
-              <textarea typeof="input" name="weight" placeholder='Date Due'/><br/>
+              <textarea typeof="input" name="weight" placeholder='Weight'/><br/>
               <label>
                 Active<input className='checkbox' type="checkbox" name="active"/>
                 Cut Out<input className='checkbox' type="checkbox" name="cutOut"/>
