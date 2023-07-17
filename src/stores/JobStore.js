@@ -68,7 +68,9 @@ export default class JobStore{
             cutOut: formData.get("cutOut"),
             job: jobId,
         }
-        console.log(`form submit${newDl}`)
+        for (const [key, value] of Object.entries(newDl)) {
+            console.log(`${key}: ${value}`);
+          }
         await fetch(`${url}/download/`, {
             method: 'POST',
             headers: {
