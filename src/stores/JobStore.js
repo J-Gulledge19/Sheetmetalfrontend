@@ -80,4 +80,31 @@ export default class JobStore{
         })
         await this.init()
     }
+
+    async updateDl(e, jobId, dlId){
+        e.preventDefault()
+        const formData = new FormData(e.target)
+        const updatedDl = {
+            dlName: formData.get("dlName"),
+            done: formData.get("done") === "on" ? true : false,
+            dateTurnedIn: formData.get("dateTurnedIn"),
+            dateDue: formData.get("dateDue"),
+            receivedBy: formData.get("receivedBy"),
+            fittings: formData.get("fittings"),
+            duct: formData.get("duct"),
+            weight: formData.get("weight"),
+            active: formData.get("active") === "on" ? true : false,
+            cutOut: formData.get("cutOut") === "on" ? true : false,
+            job: jobId,
+        }
+
+        await fetch(`${url}/download/${dlId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedDl)
+        })
+        await this.init()
+    }
 }
