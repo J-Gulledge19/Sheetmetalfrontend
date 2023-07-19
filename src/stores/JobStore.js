@@ -57,15 +57,15 @@ export default class JobStore{
         const formData = new FormData(e.target)
         const newDl = {
             dlName: formData.get("dlName"),
-            done: formData.get("done"),
+            done: formData.get("done") === "on" ? true : false,
             dateTurnedIn: formData.get("dateTurnedIn"),
             dateDue: formData.get("dateDue"),
             receivedBy: formData.get("receivedBy"),
             fittings: formData.get("fittings"),
             duct: formData.get("duct"),
             weight: formData.get("weight"),
-            active: formData.get("active"),
-            cutOut: formData.get("cutOut"),
+            active: formData.get("active") === "on" ? true : false,
+            cutOut: formData.get("cutOut") === "on" ? true : false,
             job: jobId,
         }
         for (const [key, value] of Object.entries(newDl)) {
