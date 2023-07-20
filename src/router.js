@@ -4,7 +4,7 @@ import Show from "./pages/Show"
 import Index from "./pages/Index"
 import NewJob from "./pages/NewJob"
 import UpdateDl from "./pages/UpdateDl"
-// import UpdateJob from "./pages/UpdateJob"
+import UpdateJob from "./pages/UpdateJob"
 import CreateDl from "./pages/CreateDl"
 import { RootStore } from "./stores/RootStore"
 
@@ -19,7 +19,7 @@ const router = createBrowserRouter(createRoutesFromElements(
           <Route path="create" element={<NewJob/>} />
           <Route path="newdl/:id" element={<CreateDl/>} />
           <Route path="edit/:id/:dlId" element={<UpdateDl/>} />
-          {/* <Route path="editjob/:id" element={<UpdateJob/>}/> */}
+          <Route path="editjob/:id" element={<UpdateJob/>}/>
       </Route>
   </>
 ))
