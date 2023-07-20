@@ -14,6 +14,7 @@ export default class JobStore{
             fetchJobs: action,
             createJob: action,
             createDl: action,
+            updateDl: action,
         })
     }
     
@@ -77,6 +78,25 @@ export default class JobStore{
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(newDl)
+        })
+        await this.init()
+    }
+
+    async updateJob(e, jobId){
+        e.preventDefault()
+        const formData = new FormData(e.target)
+        const updatedJob = {
+            id: jobId,
+            name: formData.get("name"),
+            number: formData.get("number"),
+        }
+
+        await fetch(`${url}/job/${jobId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedJob)
         })
         await this.init()
     }
