@@ -127,4 +127,24 @@ export default class JobStore{
         })
         await this.init()
     }
+
+    async deleteAction(jobId){
+        await fetch(`${url}/job/${jobId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        await this.init()
+    }
+
+    async deleteDlAction(dlId){
+        await fetch(`${url}/download/${dlId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        await this.init()
+    }
 }
