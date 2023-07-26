@@ -20,16 +20,17 @@ const Index = () => {
                 <th>Delete</th>
             </tr>
         
-            {store.jobStore._jobs.map(job => (
+            {store.jobStore._jobs.map(job => ( 
+                
             <tr>
                 <td><Link className="link" to={`show/${job.id}`}>
                 <p>{job.name}</p>
                 </Link></td>
                 <td>{job.number}</td>
-                <td></td>
+                <td>{job.downloads.reduce(function (accumulator, item) { return accumulator + item.weight;}, 0)}lb</td>
                 <Link className="link" to={`/editjob/${job.id}`}>
-                        <td><div className='show-edit'><AiFillEdit/></div></td>
-                    </Link>
+                    <td><div className='show-edit'><AiFillEdit/></div></td>
+                </Link>
                         <td className='deletebutton' onClick={async () => {
                             await store.jobStore.deleteAction(job.id)
                         }}>
