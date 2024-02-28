@@ -84,9 +84,10 @@ main{
 .form-page{
     border-radius: 20px;
     text-align: left;
-    background-image: linear-gradient(to right, rgb(0, 191, 255) , rgb(3, 53, 170));;
+    background-image: linear-gradient(to right, rgb(73, 142, 165) , rgb(59, 90, 163));;
     font-weight: bold;
     box-shadow: 4px 4px 5px rgb(6, 6, 6), 0px 0px 10px rgb(86, 86, 86);
+    margin-top: -20px;
 }
 
 h4{
@@ -96,7 +97,7 @@ h4{
 }
 
 textarea{
-  width: 50vw;
+  width: 80vw;
   margin-left: 20px;
   margin-right: 10px;
 }
