@@ -54,6 +54,9 @@ th{
 td{
   background-color: rgb(243, 243, 243);
   color: rgb(0, 0, 0);
+  font-weight: bold;
+  height: 50px;
+  width: 100px;
 }
 
 h2{
