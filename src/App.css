@@ -35,7 +35,7 @@ table, th, td {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  box-shadow: 4px 4px 5px rgb(6, 6, 6), 0px 0px 10px rgb(86, 86, 86); 
+  box-shadow: 1px 1px 1px rgb(6, 6, 6), 0px 0px 4px rgb(86, 86, 86); 
   max-width: 600px; 
   min-width: 80px;
   border-radius: 6px; 
