@@ -170,6 +170,12 @@ a:hover{
   padding-bottom: 1.2rem;
 }
 
+.show-edit:hover{
+  cursor: pointer;
+  background-color: rgb(8, 115, 255);
+}
+
+
 /* Led Styling */
 .led-box {
   height: 30px;
