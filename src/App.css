@@ -173,6 +173,7 @@ a:hover{
 .show-edit:hover{
   cursor: pointer;
   background-color: rgb(8, 115, 255);
+  border-radius: 5px;
 }
 
 
