@@ -64,9 +64,11 @@ const Show = () => {
                             <td>{dl.duct}</td>
                             <td>{dl.weight}</td>
                             <td>{dl.done ? "Yes" : "No"}</td>
-                            <Link className="link" to={`/edit/${selectedJob.id}/${dl.id}`}>
-                            <td><div className='show-edit'><AiFillEdit/></div></td>
-                        </Link>
+                            <td className='show-edit'>
+                                <Link className="link" to={`/edit/${selectedJob.id}/${dl.id}`}>
+                                    <AiFillEdit/>
+                                </Link>
+                            </td>
                             <td className='deletebutton' onClick={async () => {
                                 await store.jobStore.deleteDlAction(dl.id)
                             }}>
