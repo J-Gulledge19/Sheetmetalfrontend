@@ -49,6 +49,7 @@ th{
   background-color: rgb(116, 188, 221);
   color: rgb(0, 0, 0);
   font-weight: bold;
+  padding-bottom: 2px;
 }
 
 td{
@@ -166,8 +167,8 @@ a:hover{
 }
 
 .show-edit{
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 .show-edit:hover{
@@ -176,6 +177,9 @@ a:hover{
   border-radius: 5px;
 }
 
+svg{
+  color: rgb(0, 0, 0);
+}
 
 /* Led Styling */
 .led-box {
