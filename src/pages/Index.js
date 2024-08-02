@@ -28,9 +28,11 @@ const Index = () => {
                 </Link></td>
                 <td>{job.number}</td>
                 <td>{job.downloads.reduce(function (accumulator, item) { return accumulator + item.weight;}, 0)}lb</td>
-                <Link className="link" to={`/editjob/${job.id}`}>
-                    <td><div className='show-edit'><AiFillEdit/></div></td>
-                </Link>
+                    <td className='show-edit'>
+                        <Link to={`/editjob/${job.id}`}>
+                                <AiFillEdit/>
+                        </Link>
+                    </td>
                         <td className='deletebutton' onClick={async () => {
                             await store.jobStore.deleteAction(job.id)
                         }}>
